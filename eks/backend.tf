@@ -1,16 +1,16 @@
 terraform {
-  required_version = "~> 1.9.3"
+  required_version = "~> 1.14"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.49.0"
+      version = "~> 6.22"
     }
   }
   backend "s3" {
     bucket         = "dev-aman-tf-bucket"
     region         = "us-east-1"
     key            = "eks/terraform.tfstate"
-    dynamodb_table = "Lock-Files"
+    dynamodb_table = "Lock-Files"            // use_lock_files = true  //in new tf version, dynamodb is not required.
     encrypt        = true
   }
 }
