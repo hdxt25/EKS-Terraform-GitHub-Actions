@@ -10,7 +10,7 @@ terraform {
     bucket         = "dev-aman-tf-bucket"
     region         = "us-east-1"
     key            = "eks/terraform.tfstate"
-    dynamodb_table = "Lock-Files"            // use_lock_files = true  //in new tf version, dynamodb is not required.
+    use_lock_files = true  //in new tf version, dynamodb_table is deprecated.
     encrypt        = true
   }
 }
