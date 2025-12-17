@@ -7,7 +7,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket       = "dev-tf-bucket-23112025"
+    bucket       = "dev-tf-bucket-08122025"
     region       = "us-east-2"
     key          = "eks/terraform.tfstate"
     use_lockfile = true //in new tf version, dynamodb_table is deprecated.
